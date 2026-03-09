@@ -82,6 +82,22 @@
 <p class="fine">No spam. Unsubscribe anytime.</p>
 </div></div></section>
 <footer><div class="container">
+<section class="optin-section" id="free-prompts">
+<div class="container">
+<div class="optin-box">
+<div class="optin-tag">🎁 Free Gift</div>
+<h2>Get 5 Free ChatGPT Prompts for Real Estate Agents</h2>
+<p>Copy-paste prompts that cut your listing prep, follow-ups, and social content down to minutes. No fluff — just prompts that work.</p>
+<form class="optin-form" onsubmit="handleOptIn(event)">
+<input type="text" name="first_name" placeholder="First name" required>
+<input type="email" name="email" placeholder="Your email address" required>
+<button type="submit" class="btn btn-primary btn-lg">Send Me the Free Prompts →</button>
+</form>
+<p class="optin-fine">No spam. Unsubscribe anytime. Instant delivery.</p>
+<div class="optin-success" id="optin-success" style="display:none;">✅ Check your inbox! Your free prompts are on the way.</div>
+</div>
+</div>
+</section>
 <div class="foot-top">
 <div><a href="/" class="logo">Autonomy<span>One</span></a>
 <p>Premium AI tools for modern professionals.</p>
@@ -99,5 +115,32 @@
 <p>© 2026 Autonomy One LLC. All rights reserved. · <a href="mailto:connect@autonomyonellc.com">connect@autonomyonellc.com</a></p>
 <p>We sell digital products including AI prompt packs, professional templates, and business automation tools. All products are delivered electronically.</p>
 </div></div></footer>
-<script>function sub(e){e.preventDefault();const b=e.target.querySelector('button');b.textContent='✓ You\'re on the list!';b.disabled=true;e.target.querySelector('input').disabled=true;}</script>
+<script>
+async function handleOptIn(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button');
+  const firstName = form.querySelector('[name="first_name"]').value;
+  const email = form.querySelector('[name="email"]').value;
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ first_name: firstName, email: email })
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('optin-success').style.display = 'block';
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
+}
+</script>
 </body></html>
