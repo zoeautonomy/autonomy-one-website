@@ -79,3 +79,37 @@ footer{background:var(--dark);color:#94a3b8;padding:56px 0 36px}
 .optin-form input:focus { border-color: #6366f1; }
 .optin-fine { color: #475569; font-size: 0.85rem; margin-top: 8px; }
 .optin-success { color: #34d399; font-size: 1.1rem; font-weight: 600; padding: 20px; }
+
+/* ── Dark Mode Theme ─────────────────────────────────────────────────────── */
+*,*::before,*::after{transition:background-color .4s ease,color .4s ease,border-color .4s ease,box-shadow .4s ease}
+
+[data-theme='dark']{
+  --dark:#f1f5f9;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --light:#0f172a;
+  --border:#1e293b;
+}
+[data-theme='dark'] body{background:#0d1117;color:#e2e8f0}
+[data-theme='dark'] .nav{background:rgba(13,17,23,.95);border-bottom-color:#1e293b}
+[data-theme='dark'] .logo{color:#f1f5f9}
+[data-theme='dark'] .card{background:#161b22;box-shadow:0 4px 6px -1px rgba(0,0,0,.4)}
+[data-theme='dark'] .product-card{background:#161b22;border-color:#1e293b}
+[data-theme='dark'] .product-right{background:#0f172a;border-color:#1e293b}
+[data-theme='dark'] .values{background:#0f172a}
+[data-theme='dark'] .products section,[data-theme='dark'] section{background:transparent}
+[data-theme='dark'] footer{background:#010409}
+[data-theme='dark'] .foot-bottom{border-top-color:#1e293b}
+[data-theme='dark'] h1,[data-theme='dark'] h2,[data-theme='dark'] h3{color:#f1f5f9}
+[data-theme='dark'] .product-left h3,[data-theme='dark'] .product-left p,[data-theme='dark'] .product-left li{color:#e2e8f0}
+[data-theme='dark'] .price{color:#f1f5f9}
+[data-theme='dark'] section[style*='background:#fff']{background:#0f172a!important}
+[data-theme='dark'] section[style*='background:var(--light)'],[data-theme='dark'] div[style*='background:var(--light)']{background:#0f172a!important}
+[data-theme='dark'] a[style*='background:var(--light)']{background:#161b22!important;border-color:#1e293b!important}
+[data-theme='dark'] h3[style*='color:var(--dark)']{color:#f1f5f9!important}
+[data-theme='dark'] p[style*='color:var(--muted)']{color:#94a3b8!important}
+[data-theme='dark'] div[style*='border-bottom:1px solid var(--border)']{border-bottom-color:#1e293b!important}
+
+/* Theme toggle pill */
+.theme-pill{position:fixed;bottom:20px;right:20px;background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.3);color:#a5b4fc;padding:8px 16px;border-radius:100px;font-size:13px;font-weight:600;cursor:pointer;z-index:999;backdrop-filter:blur(8px);transition:all .3s}
+.theme-pill:hover{background:rgba(99,102,241,.25)}

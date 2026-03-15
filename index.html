@@ -138,6 +138,30 @@ fbq("track", "PageView");
 src="https://www.facebook.com/tr?id=19964883375726240026ev=PageView0026noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+
+<script>
+(function(){
+  var stored = localStorage.getItem('ao-theme');
+  var hour = new Date().getHours();
+  var isDark = stored ? stored === 'dark' : (hour >= 20 || hour < 7);
+  document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+  window.addEventListener('DOMContentLoaded', function(){
+    var pill = document.createElement('button');
+    pill.className = 'theme-pill';
+    pill.id = 'themePill';
+    pill.textContent = isDark ? '☀️ Day Mode' : '🌙 Night Mode';
+    pill.onclick = function(){
+      var cur = document.documentElement.getAttribute('data-theme');
+      var next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('ao-theme', next);
+      pill.textContent = next === 'dark' ? '☀️ Day Mode' : '🌙 Night Mode';
+    };
+    document.body.appendChild(pill);
+  });
+})();
+</script>
 </head><body>
 <nav class="nav"><div class="container nav-inner"><a href="/" class="logo">Autonomy<span>One</span></a><div class="nav-links"><a href="/free-prompts.html" class="nav-link">Free Prompts</a><a href="/blog/" class="nav-link">Blog</a><a href="#products" class="btn btn-cta">Shop Now →</a></div></div></nav>
 <section class="hero"><div class="container">
