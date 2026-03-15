@@ -130,3 +130,8 @@ footer{background:var(--dark);color:#94a3b8;padding:56px 0 36px}
 [data-theme='dark'] a[style*='background:var(--light)']{background:#161b22!important;border-color:#1e293b!important}
 [data-theme='dark'] div[style*='background:#fff']{background:#0f172a!important}
 [data-theme='dark'] div[style*='border-bottom']{border-bottom-color:#1e293b!important}
+
+/* ── Dark Mode Button Fixes ──────────────────────────────────────────────── */
+[data-theme='dark'] .btn-cta{background:#6366f1!important;color:#fff!important}
+[data-theme='dark'] .btn-cta:hover{background:#4f46e5!important}
+[data-theme='dark'] a[style*='background:var(--dark)']{background:#6366f1!important;color:#fff!important}
