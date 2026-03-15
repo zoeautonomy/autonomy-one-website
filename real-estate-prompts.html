@@ -64,5 +64,45 @@ nav{padding:16px 24px;display:flex;justify-content:space-between;align-items:cen
 <div style="text-align:center;padding:20px 20px 60px">
   <a href="https://zoeautonomy.gumroad.com/l/real-estate-prompts" class="cta" onclick="fbq('track','InitiateCheckout')">Get Instant Access — $27 →</a>
 </div>
+<!-- EMAIL CAPTURE SECTION -->
+<div style="background:#161b22;border:1px solid #30363d;border-radius:16px;max-width:600px;margin:0 auto 60px;padding:48px 40px;text-align:center">
+  <div style="font-size:36px;margin-bottom:16px">🎁</div>
+  <h2 style="font-size:28px;font-weight:800;margin-bottom:12px">Not ready to buy yet?</h2>
+  <p style="color:#8b949e;font-size:17px;line-height:1.6;margin-bottom:28px">Get <strong style="color:#ffd600">25 free prompts</strong> delivered instantly — no credit card, no catch.</p>
+  <form id="leadForm" style="display:flex;flex-direction:column;gap:14px;max-width:420px;margin:0 auto">
+    <input type="text" id="firstName" placeholder="First name" style="padding:14px 18px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#fff;font-size:16px;outline:none">
+    <input type="email" id="emailInput" placeholder="Your email address" required style="padding:14px 18px;border-radius:8px;border:1px solid #30363d;background:#0d1117;color:#fff;font-size:16px;outline:none">
+    <button type="submit" style="background:#ffd600;color:#0d1117;font-weight:800;font-size:18px;padding:16px;border:none;border-radius:8px;cursor:pointer">Send Me 25 Free Prompts →</button>
+  </form>
+  <div id="leadMsg" style="display:none;margin-top:20px;color:#4caf50;font-size:16px;font-weight:600">✅ Check your inbox — prompts are on the way!</div>
+  <p style="color:#555;font-size:13px;margin-top:16px">No spam. Unsubscribe anytime.</p>
+</div>
+<script>
+document.getElementById('leadForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const email = document.getElementById('emailInput').value;
+  const firstName = document.getElementById('firstName').value;
+  const btn = this.querySelector('button');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const res = await fetch('/subscribe', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({email, first_name: firstName})
+    });
+    const data = await res.json();
+    if (data.success) {
+      fbq('track', 'Lead');
+      document.getElementById('leadForm').style.display = 'none';
+      document.getElementById('leadMsg').style.display = 'block';
+    }
+  } catch(err) {
+    btn.textContent = 'Send Me 25 Free Prompts →';
+    btn.disabled = false;
+  }
+});
+</script>
+<!-- END EMAIL CAPTURE -->
 <footer>© 2025 Autonomy One LLC · <a href="/" style="color:#444">autonomyonellc.com</a></footer>
 </body></html>
