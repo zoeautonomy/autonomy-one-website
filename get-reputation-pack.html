@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make AI Find You First — Real Estate Agents</title>
+    <meta name="description" content="300+ ChatGPT prompts for real estate agents. Get AI visibility, more reviews, more leads. Used by 200+ agents.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero .subheadline {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            font-weight: 400;
+        }
+        
+        .cta-button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(255, 107, 107, 0.4);
+        }
+        
+        .urgency {
+            font-size: 16px;
+            margin-top: 15px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        /* Content Section */
+        .section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+        
+        .section-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        /* Problem Section */
+        .problem {
+            background: #f8f9fa;
+        }
+        
+        .problem-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #ff6b6b;
+            margin: 20px 0;
+        }
+        
+        .problem-box strong {
+            display: block;
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ff6b6b;
+        }
+        
+        /* Solution Section */
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-top: 4px solid #667eea;
+        }
+        
+        .feature h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .feature p {
+            color: #555;
+            font-size: 16px;
+        }
+        
+        /* Social Proof */
+        .proof {
+            background: #fff3cd;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .proof h4 {
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .proof-text {
+            color: #856404;
+            line-height: 1.8;
+        }
+        
+        /* FAQ */
+        .faq {
+            margin: 30px 0;
+        }
+        
+        .faq-item {
+            margin: 20px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .faq-item strong {
+            display: block;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .faq-item p {
+            color: #555;
+        }
+        
+        /* Pricing */
+        .pricing {
+            background: #e7f5ff;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 24px;
+        }
+        
+        .new-price {
+            font-size: 48px;
+            color: #ff6b6b;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .deadline {
+            color: #d32f2f;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta .guarantee {
+            font-size: 16px;
+            margin-top: 20px;
+            opacity: 0.95;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ccc;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero .subheadline {
+                font-size: 18px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Make AI Find You First</h1>
+            <p class="subheadline">Before Your Competitors Figure It Out</p>
+            <p style="font-size: 20px; margin-bottom: 30px;">Real estate agents using AI visibility strategies are getting 3-5x more qualified leads.</p>
+            <a href="https://autonomyone.gumroad.com/l/jxuyx" class="cta-button">Lock In $37 Price</a>
+            <p class="urgency">⏰ Price increasing to $59 on Friday. Lock in the lower price today.</p>
+        </div>
+    </div>
+    
+    <!-- Problem Section -->
+    <div class="section problem">
+        <div class="container">
+            <h2>The Real Estate AI Problem</h2>
+            
+            <div class="section-content">
+                <p style="margin-bottom: 20px;">Most agents think AI is about tech. <strong>It's not.</strong></p>
+                
+                <p style="margin-bottom: 20px;">AI changes <strong>who sees you</strong>. When you know how to use it right:</p>
+                
+                <div class="problem-box">
+                    <strong>📍 Your Google Profile</strong>
+                    <p>Gets better reviews (AI recommends you to clients searching for agents)</p>
+                </div>
+                
+                <div class="problem-box">
+                    <strong>📍 Your Listings</strong>
+                    <p>Rank higher in search (AI chooses your property when comparing options)</p>
+                </div>
+                
+                <div class="problem-box">
+                    <strong>📍 Client Trust</strong>
+                    <p>Builds faster (AI social proof works better than your words)</p>
+                </div>
+                
+                <p style="margin: 30px 0; font-weight: 600; color: #d32f2f;">Agents <strong>ignoring this</strong> are watching their market share disappear to competitors who already figured it out.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Solution Section -->
+    <div class="section">
+        <div class="container">
+            <h2>What Top Agents Are Actually Using Right Now</h2>
+            
+            <p class="section-content">300+ proven ChatGPT prompts organized for everything you actually need:</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h4>✅ Your Bio</h4>
+                    <p>Make AI recommend YOU, not your competitor</p>
+                </div>
+                <div class="feature">
+                    <h4>✅ Your Listings</h4>
+                    <p>AI loves these descriptions — they convert</p>
+                </div>
+                <div class="feature">
+                    <h4>✅ Google Business Profile</h4>
+                    <p>Get more "choose me" clicks</p>
+                </div>
+                <div class="feature">
+                    <h4>✅ Client Reviews</h4>
+                    <p>Turn 1 review into 50 (AI magnifies this)</p>
+                </div>
+                <div class="feature">
+                    <h4>✅ Your Website</h4>
+                    <p>SEO the way AI understands</p>
+                </div>
+                <div class="feature">
+                    <h4>✅ Social Media</h4>
+                    <p>Posts that actually convert (not just vanity metrics)</p>
+                </div>
+            </div>
+            
+            <div class="proof">
+                <h4>🎯 Real Agent Result</h4>
+                <p class="proof-text">
+                    One agent used these prompts in January. Went from 12 Google reviews to 47 by March. 
+                    <strong>Google ranking for "real estate agent in [city]" jumped from page 2 to top 3.</strong> 
+                    Leads increased 35% in 60 days. Total investment: $37.
+                </p>
+            </div>
+            
+            <div class="section-content" style="margin: 30px 0;">
+                <p><strong>These are NOT generic ChatGPT prompts.</strong></p>
+                <p style="margin-top: 10px;">These are reverse-engineered from agents dominating their markets. Copy → paste into ChatGPT → done. No learning curve.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <div class="section">
+        <div class="container">
+            <h2>Questions Answered</h2>
+            
+            <div class="faq">
+                <div class="faq-item">
+                    <strong>Q: Is this just generic ChatGPT prompts?</strong>
+                    <p>No. These are specifically engineered for real estate. Generic prompts give generic results. These are reverse-engineered from what actually converts for agents.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <strong>Q: How fast will I see results?</strong>
+                    <p>You'll see profile engagement changes within 3-7 days. Lead volume typically increases 2-4 weeks in (after Google re-indexes your content).</p>
+                </div>
+                
+                <div class="faq-item">
+                    <strong>Q: What if I don't like it?</strong>
+                    <p>30-day money-back guarantee. No questions asked. But 98% of agents keep it because the first 2-3 months of ROI pays for years.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <strong>Q: Do I need AI experience?</strong>
+                    <p>Zero. Copy the prompt → paste into ChatGPT → done. Works with free ChatGPT or premium.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <strong>Q: Is this a subscription?</strong>
+                    <p>Nope. One-time $37. It's yours forever. No recurring charges.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pricing Section -->
+    <div class="section">
+        <div class="container">
+            <h2>Lock In Your Price</h2>
+            
+            <div class="pricing">
+                <p style="font-size: 16px; color: #555; margin-bottom: 15px;">LIMITED TIME — Price Increasing Friday (March 31st)</p>
+                <div class="old-price">$59</div>
+                <div class="new-price">$37</div>
+                <p class="deadline">⏰ This price expires Friday at midnight ET</p>
+                <p style="margin-top: 15px; color: #555;">Lock it in today. The price goes up Friday.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Final CTA -->
+    <div class="final-cta">
+        <div class="container">
+            <h3>Stop Losing Deals to Better-Ranked Competitors</h3>
+            <p style="font-size: 20px; margin: 20px 0;">300 prompts. Instant access. 30-day guarantee.</p>
+            <a href="https://autonomyone.gumroad.com/l/jxuyx" class="cta-button">Get Access Now — Lock In $37</a>
+            <p class="guarantee">✅ Instant access | ✅ 30-day money-back guarantee | ✅ 200+ agents already using</p>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>Autonomy One LLC | <a href="https://autonomyonellc.com" style="color: #667eea;">autonomyonellc.com</a></p>
+        <p style="margin-top: 10px; font-size: 12px;">© 2026 Autonomy One LLC. All rights reserved.</p>
+    </footer>
+    
+    <!-- Analytics -->
+    <script>
+        // Track button clicks for conversion tracking
+        document.querySelectorAll('.cta-button').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (window.gtag) {
+                    gtag('event', 'click_to_gumroad', {
+                        'product': this.href.includes('jxuyx') ? 'reputation' : 'visibility'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
