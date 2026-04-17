@@ -1,225 +1,442 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Blog — AI Prompts & Tools for Real Estate Agents | Autonomy One</title>
-<meta name="description" content="Tips, guides, and strategies for real estate agents and mortgage brokers using AI and ChatGPT to save time, close more deals, and grow their business.">
-<meta name="keywords" content="ChatGPT for real estate agents, AI tools for real estate, real estate productivity, mortgage broker AI, ChatGPT prompts blog">
-<link rel="canonical" href="https://autonomyonellc.com/blog/">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://autonomyonellc.com/blog/">
-<meta property="og:title" content="Blog — AI Prompts & Tools for Real Estate Agents | Autonomy One">
-<meta property="og:description" content="Tips, guides, and strategies for real estate professionals using AI and ChatGPT to grow their business.">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Autonomy One Blog",
-  "url": "https://autonomyonellc.com/blog/",
-  "description": "AI strategies and prompt guides for real estate agents and mortgage brokers.",
-  "publisher": { "@type": "Organization", "name": "Autonomy One LLC", "url": "https://autonomyonellc.com" }
-}
-</script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css">
-<style>
-.blog-hero{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 100%);color:#fff;padding:72px 0 60px;text-align:center}
-.blog-hero h1{font-size:clamp(2rem,5vw,3rem);font-weight:900;letter-spacing:-1.5px;margin-bottom:16px}
-.blog-hero p{color:#94a3b8;font-size:1.1rem;max-width:520px;margin:0 auto}
-.blog-grid{padding:72px 0;background:var(--light)}
-.blog-grid .container{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:32px}
-.blog-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 6px -1px rgba(0,0,0,.08);border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
-.blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.12)}
-.blog-card-img{background:linear-gradient(135deg,#1e1b4b,#0f172a);padding:40px 32px;display:flex;align-items:center;justify-content:center;font-size:3rem}
-.blog-card-body{padding:28px}
-.blog-cat{font-size:11px;font-weight:700;color:var(--brand);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
-.blog-card h2{font-size:1.2rem;font-weight:800;color:var(--dark);letter-spacing:-.3px;margin-bottom:12px;line-height:1.3}
-.blog-card p{color:var(--muted);font-size:.9rem;line-height:1.6;margin-bottom:20px}
-.blog-meta{font-size:12px;color:#94a3b8;margin-bottom:16px}
-.read-more{font-size:14px;font-weight:700;color:var(--brand);text-decoration:none}
-.read-more:hover{color:#4f46e5}
-.blog-cta{background:linear-gradient(135deg,#0f172a,#1e1b4b);padding:72px 0;text-align:center;color:#fff}
-.blog-cta h2{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:800;letter-spacing:-1px;margin-bottom:14px}
-.blog-cta p{color:#94a3b8;font-size:1.05rem;max-width:480px;margin:0 auto 32px}
-.breadcrumb{font-size:13px;color:#64748b;margin-bottom:8px}
-.breadcrumb a{color:#94a3b8;text-decoration:none}
-.breadcrumb a:hover{color:#fff}
-</style>
-</head><body>
-<nav class="nav"><div class="container nav-inner"><a href="/" class="logo">Autonomy<span>One</span></a><div class="nav-links"><a href="/blog/" class="nav-link" style="font-size:14px;font-weight:600;color:var(--brand);text-decoration:none;margin-right:16px">Blog</a><a href="/#products" class="btn btn-cta">Shop Now →</a></div></div></nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — AI Prompts & Tools for Real Estate Agents | Autonomy One</title>
+    <meta name="description" content="Tips, guides, and strategies for real estate agents and mortgage brokers using AI and ChatGPT to save time, close more deals, and grow their business.">
+    <meta name="keywords" content="ChatGPT for real estate agents, AI tools for real estate, real estate productivity, mortgage broker AI">
+    <link rel="canonical" href="https://autonomyonellc.com/blog/">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://autonomyonellc.com/blog/">
+    <meta property="og:title" content="Blog — AI Prompts & Tools for Real Estate Agents | Autonomy One">
+    <meta property="og:description" content="Tips, guides, and strategies for real estate professionals using AI and ChatGPT to grow their business.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Autonomy One Blog",
+      "url": "https://autonomyonellc.com/blog/"
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<section class="blog-hero">
-  <div class="container">
-    <div class="tag">📚 The AI Advantage</div>
-    <h1>Real Estate & Mortgage AI<br>Tips That Actually Work</h1>
-    <p>Practical guides for agents and brokers using ChatGPT to save time, close more deals, and build a better business.</p>
-  </div>
-</section>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f0c1e 0%, #1a0f2e 50%, #2a1555 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-<section class="blog-grid">
-  <div class="container">
+        /* Gradient orbs */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            pointer-events: none;
+        }
 
-    <a href="/blog/chatgpt-prompts-real-estate-agents.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">🏡</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · AI Prompts</div>
-          <h2>500 ChatGPT Prompts for Real Estate Agents: The Complete Guide</h2>
-          <div class="blog-meta">March 10, 2026 · 8 min read</div>
-          <p>Everything you need to know about using ChatGPT as a real estate agent — from listing descriptions to client follow-ups and 90 days of social content.</p>
-          <span class="read-more">Read Article →</span>
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -30%;
+            left: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #a855f7;
+        }
+
+        nav .cta-primary {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        nav .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(168, 85, 247, 0.5);
+            transform: translateY(-5px);
+        }
+
+        .blog-img {
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.3), rgba(236, 72, 153, 0.2));
+            padding: 3rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            min-height: 150px;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-category {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #a855f7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #808080;
+            margin-bottom: 1rem;
+        }
+
+        .blog-excerpt {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-link {
+            color: #a855f7;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .blog-link:hover {
+            color: #ec4899;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 2rem;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 3rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .cta-section p {
+            color: #b0b0b0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-primary {
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            color: white;
+            padding: 0.9rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(168, 85, 247, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+            color: #808080;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #a855f7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+            }
+
+            nav a {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .blog-card {
+                flex-direction: row;
+            }
+
+            .blog-img {
+                min-width: 120px;
+                min-height: 120px;
+                padding: 1.5rem;
+                flex-shrink: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Autonomy One</div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/#products">Products</a>
+            <a href="/blog" class="cta-primary">Blog</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>The AI <span>Advantage</span> for Real Estate</h1>
+        <p>Practical guides and strategies for agents and brokers using ChatGPT to save time, close more deals, and grow their business.</p>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+        <div class="blog-grid">
+            <a href="/blog/chatgpt-prompts-insurance-agents.html" class="blog-card">
+                <div class="blog-img">🛡️</div>
+                <div class="blog-content">
+                    <div class="blog-category">Insurance · AI Prompts</div>
+                    <h2>500 ChatGPT Prompts for Insurance Agents: Save Hours Every Week</h2>
+                    <div class="blog-meta">April 15, 2026 · 6 min read</div>
+                    <p class="blog-excerpt">Complete prompt system for insurance professionals. Generate quotes, handle objections, create follow-ups, and build client relationships 10x faster.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="/blog/chatgpt-real-estate-email-templates.html" class="blog-card">
+                <div class="blog-img">✉️</div>
+                <div class="blog-content">
+                    <div class="blog-category">Real Estate · Templates</div>
+                    <h2>ChatGPT Real Estate Email Templates: 12 Scripts You Can Use Today</h2>
+                    <div class="blog-meta">April 1, 2026 · 7 min read</div>
+                    <p class="blog-excerpt">Ready-to-use email templates for listing inquiries, follow-ups, negotiations, and more. Copy, paste, personalize. Send in seconds.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="/blog/local-seo-real-estate-agents-2026.html" class="blog-card">
+                <div class="blog-img">📍</div>
+                <div class="blog-content">
+                    <div class="blog-category">Real Estate · SEO</div>
+                    <h2>Local SEO for Real Estate Agents: Complete 2026 Guide</h2>
+                    <div class="blog-meta">March 25, 2026 · 9 min read</div>
+                    <p class="blog-excerpt">Dominate local search results in your market. Google Business Profile optimization, local keywords, citations, and the AI tools that make it all automatic.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="/blog/ai-real-estate-2026.html" class="blog-card">
+                <div class="blog-img">🤖</div>
+                <div class="blog-content">
+                    <div class="blog-category">Real Estate · Industry Trends</div>
+                    <h2>How AI Is Changing Real Estate in 2026 (And What Agents Should Do Now)</h2>
+                    <div class="blog-meta">March 25, 2026 · 8 min read</div>
+                    <p class="blog-excerpt">AI isn't coming to real estate—it's already here. The agents adopting it now are crushing their targets. Here's the playbook.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="/blog/chatgpt-prompts-real-estate-lead-generation.html" class="blog-card">
+                <div class="blog-img">🎯</div>
+                <div class="blog-content">
+                    <div class="blog-category">Real Estate · Lead Generation</div>
+                    <h2>ChatGPT Prompts for Real Estate Lead Generation (Scripts That Work)</h2>
+                    <div class="blog-meta">March 15, 2026 · 7 min read</div>
+                    <p class="blog-excerpt">Generate qualified leads using ChatGPT. Cold outreach scripts, email sequences, social media strategies, and ads copy that converts.</p>
+                    <span class="blog-link">Read Article →</span>
+                </div>
+            </a>
+
+            <a href="/free-prompts.html" class="blog-card">
+                <div class="blog-img">🎁</div>
+                <div class="blog-content">
+                    <div class="blog-category">Free Resource</div>
+                    <h2>25 Free ChatGPT Prompts for Real Estate Agents</h2>
+                    <div class="blog-meta">No sign-up required · Instant download</div>
+                    <p class="blog-excerpt">Get started immediately with 25 proven ChatGPT prompts. Listings, follow-ups, objection handling, and social content. Download now.</p>
+                    <span class="blog-link">Get Free Prompts →</span>
+                </div>
+            </a>
         </div>
-      </div>
-    </a>
+    </section>
 
-    <a href="/blog/chatgpt-prompts-mortgage-brokers.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">🏦</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Mortgage · AI Prompts</div>
-          <h2>ChatGPT Prompts for Mortgage Brokers: Close More Loans Faster</h2>
-          <div class="blog-meta">March 10, 2026 · 7 min read</div>
-          <p>How mortgage brokers are using ChatGPT to generate leads, explain complex loan products, handle objections, and grow their referral network — in minutes.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to Level Up?</h2>
+        <p>Get access to all our AI prompt packs. Real estate agents, mortgage brokers, and coaches are using them right now to save hours every week.</p>
+        <a href="/#products" class="cta-primary">Browse All Products</a>
+    </section>
 
-    <a href="/blog/how-to-use-chatgpt-real-estate-agent.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">🤖</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · Getting Started</div>
-          <h2>How to Use ChatGPT as a Real Estate Agent (Step-by-Step Guide 2026)</h2>
-          <div class="blog-meta">March 10, 2026 · 10 min read</div>
-          <p>A complete step-by-step guide to using ChatGPT in your real estate business — from your first prompt to saving 10+ hours every week. Includes FAQs.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog/best-ai-tools-real-estate-agents-2026.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">⚡</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · AI Roundup</div>
-          <h2>7 Best AI Tools for Real Estate Agents in 2026</h2>
-          <div class="blog-meta">March 10, 2026 · 9 min read</div>
-          <p>The AI tools top real estate agents are using right now to save time, close more deals, and run a smarter business — ranked and reviewed.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog/chatgpt-real-estate-listing-description-examples.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">📝</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · Listing Copy</div>
-          <h2>ChatGPT Listing Descriptions: 10 Real Examples With Exact Prompts</h2>
-          <div class="blog-meta">March 10, 2026 · 9 min read</div>
-          <p>10 real ChatGPT listing description examples across every property type — luxury, starter, waterfront, condo, fixer-upper — with the exact prompts that generated them.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog/real-estate-social-media-content-ai.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">📱</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · Social Media</div>
-          <h2>Real Estate Social Media Content With AI: 30 Days in 45 Minutes</h2>
-          <div class="blog-meta">March 10, 2026 · 8 min read</div>
-          <p>How real estate agents are using ChatGPT to create a full month of social content in one session — market updates, tips, neighborhood posts, and more.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-
-
-
-
-    <a href="/blog/chatgpt-prompts-real-estate-lead-generation.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">✍️</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · Lead Generation</div>
-          <h2>ChatGPT Prompts for Real Estate Lead Generation (Scripts That Work)</h2>
-          <div class="blog-meta">March 18, 2026 · 8 min read</div>
-          <p>A complete guide for professionals using ChatGPT and AI to save time, grow their business, and stay ahead of the competition.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog/local-seo-real-estate-agents-2026.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">📍</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · Local SEO</div>
-          <h2>How Real Estate Agents Can Dominate Local SEO in 2026 (Without Hiring an Agency)</h2>
-          <div class="blog-meta">March 25, 2026 · 8 min read</div>
-          <p>Local SEO is the highest-ROI marketing channel for agents in 2026. Here is the exact system to rank above your competition without paying an agency.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog/ai-real-estate-2026.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">✍️</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · Industry Trends</div>
-          <h2>How AI Is Changing Real Estate in 2026 (And What Agents Should Do Now)</h2>
-          <div class="blog-meta">March 25, 2026 · 8 min read</div>
-          <p>A complete guide for professionals using ChatGPT and AI to save time, grow their business, and stay ahead of the competition.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog/chatgpt-real-estate-email-templates.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">✍️</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Real Estate · Email Marketing</div>
-          <h2>ChatGPT Real Estate Email Templates: 12 Scripts You Can Use Today</h2>
-          <div class="blog-meta">April 1, 2026 · 8 min read</div>
-          <p>A complete guide for professionals using ChatGPT and AI to save time, grow their business, and stay ahead of the competition.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="/blog/chatgpt-prompts-insurance-agents.html" style="text-decoration:none">
-      <div class="blog-card">
-        <div class="blog-card-img">✍️</div>
-        <div class="blog-card-body">
-          <div class="blog-cat">Insurance · AI Prompts</div>
-          <h2>500 ChatGPT Prompts for Insurance Agents: Save Hours Every Week</h2>
-          <div class="blog-meta">April 15, 2026 · 8 min read</div>
-          <p>A complete guide for professionals using ChatGPT and AI to save time, grow their business, and stay ahead of the competition.</p>
-          <span class="read-more">Read Article →</span>
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<section class="blog-cta">
-  <div class="container">
-    <h2>Ready to Work Smarter?</h2>
-    <p>Grab the complete prompt pack and start saving hours every week — starting today.</p>
-    <a href="/#products" class="btn btn-primary btn-lg">Shop AI Prompt Packs →</a>
-  </div>
-</section>
-
-<footer><div class="container">
-<div class="foot-top">
-<div><a href="/" class="logo">Autonomy<span>One</span></a><p>Premium AI tools for modern professionals.</p><p><strong>Autonomy One LLC</strong></p></div>
-<div class="links"><strong>Explore</strong><a href="/blog/">Blog</a><a href="/#products">Products</a><a href="mailto:connect@autonomyonellc.com">Contact</a></div>
-<div class="links"><strong>Legal</strong><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a></div>
-</div>
-<div class="foot-bottom"><p>© 2026 Autonomy One LLC. All rights reserved.</p></div>
-</div></footer>
-</body></html>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Autonomy One LLC. All rights reserved. | <a href="/privacy-policy.html">Privacy Policy</a> | <a href="/terms.html">Terms</a></p>
+    </footer>
+</body>
+</html>
