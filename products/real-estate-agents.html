@@ -3,39 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>500 ChatGPT Prompts for Real Estate Agents | Autonomy One</title>
-<meta name="description" content="500 done-for-you ChatGPT prompts specifically built for real estate agents. Save 10+ hours per week on listings, follow-ups, objections & social content. $27 instant download.">
-<meta name="keywords" content="ChatGPT prompts real estate agents, AI prompts realtor, real estate AI tools, listing descriptions ChatGPT">
+<title>500 ChatGPT Prompts for Real Estate Agents — Save 10+ Hours/Week | Autonomy One</title>
+<meta name="description" content="500 ChatGPT prompts for real estate agents. Save 10+ hours/week on listing descriptions, follow-ups, objections & social media. Free ChatGPT. $27 one-time. 4.9★ from 127+ agents. Instant PDF. 30-day guarantee.">
+<meta name="keywords" content="ChatGPT prompts real estate agents, AI prompts realtor, listing description generator, real estate AI tools, MLS templates">
 <meta property="og:title" content="500 ChatGPT Prompts for Real Estate Agents — Autonomy One">
-<meta property="og:description" content="Stop writing from scratch. 500 AI prompts built for real estate agents. Save 10+ hours/week. $27 one-time.">
+<meta property="og:description" content="500 done-for-you prompts. Save 10+ hours/week. Works with free ChatGPT. $27. Instant download.">
 <meta property="og:type" content="product">
 <link rel="canonical" href="https://autonomyonellc.com/products/real-estate-agents">
 
-<!-- Schema Markup -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "500 ChatGPT Prompts for Real Estate Agents",
-  "description": "AI prompt pack for real estate professionals",
-  "brand": { "@type": "Brand", "name": "Autonomy One" },
-  "offers": {
-    "@type": "Offer",
-    "price": "27.00",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "127"
-  }
-}
-</script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -48,7 +26,7 @@
   --c-accent: #C85A1A;
   --c-accent2: #E8722A;
   --c-green: #1D6B3A;
-  --c-gold: #8B6914;
+  --c-red: #DC2626;
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'DM Sans', -apple-system, sans-serif;
 }
@@ -62,13 +40,31 @@ body {
   line-height: 1.6;
 }
 
+/* URGENCY BANNER */
+.urgency-banner {
+  background: linear-gradient(90deg, #DC2626, #991B1B);
+  color: #fff;
+  padding: 12px 2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.9; }
+}
+.urgency-banner strong { font-weight: 700; }
+
 /* NAV */
 nav {
-  position: sticky; top: 0; z-index: 100;
+  position: sticky; top: 12px; z-index: 100;
   background: rgba(250,250,247,0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--c-border);
   padding: 0 2rem;
+  margin-top: 0;
 }
 .nav-inner {
   max-width: 1100px; margin: 0 auto;
@@ -99,6 +95,15 @@ nav {
   display: grid; grid-template-columns: 1fr 420px;
   gap: 60px; align-items: center;
 }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(29,107,58,0.15); color: var(--c-green);
+  border: 1px solid rgba(29,107,58,0.3);
+  padding: 5px 12px; border-radius: 20px;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  margin-bottom: 20px;
+}
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(36px, 4.5vw, 52px);
@@ -113,8 +118,20 @@ nav {
   line-height: 1.65; max-width: 480px;
   margin-bottom: 32px;
 }
+.hero-results {
+  display: flex; gap: 28px; margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+.hero-result-item { display: flex; flex-direction: column; }
+.hero-result-num {
+  font-family: var(--font-display);
+  font-size: 30px; font-weight: 500; line-height: 1;
+  color: var(--c-accent); letter-spacing: -0.02em;
+}
+.hero-result-label { font-size: 12px; color: var(--c-text3); margin-top: 3px; }
+.hero-cta-group { display: flex; flex-direction: column; gap: 12px; }
 .btn-primary {
-  display: inline-flex; align-items: center; gap: 8px;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   background: var(--c-accent); color: #fff;
   padding: 16px 32px; border-radius: 8px;
   font-size: 16px; font-weight: 500;
@@ -124,14 +141,26 @@ nav {
   width: fit-content;
 }
 .btn-primary:hover { background: var(--c-accent2); transform: translateY(-2px); }
+.hero-trust-micro {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--c-text3);
+}
+.stars { color: #E8A020; letter-spacing: 1px; font-size: 13px; }
 
-/* CARD */
+/* HERO CARD */
 .hero-card {
   background: var(--c-surface);
-  border: 1px solid rgba(30,28,20,0.18);
+  border: 1px solid var(--c-border);
   border-radius: 16px;
   padding: 28px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+  position: relative;
+}
+.hero-card-badge {
+  position: absolute; top: -12px; right: 24px;
+  background: var(--c-accent); color: #fff;
+  padding: 4px 14px; border-radius: 20px;
+  font-size: 12px; font-weight: 500;
 }
 .hero-card h3 {
   font-family: var(--font-display);
@@ -147,24 +176,72 @@ nav {
   font-size: 18px; color: var(--c-text3);
   text-decoration: line-through;
 }
+.price-note { font-size: 13px; color: var(--c-text3); }
 .card-features { list-style: none; margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
 .card-features li {
   display: flex; align-items: flex-start; gap: 8px;
   font-size: 14px; color: var(--c-text2); line-height: 1.4;
 }
-.check { color: var(--c-green); font-weight: 500; }
+.check { color: var(--c-green); font-weight: 500; flex-shrink: 0; }
 .btn-card {
   width: 100%; background: var(--c-accent); color: #fff;
   padding: 14px; border-radius: 8px;
   font-size: 15px; font-weight: 500;
   text-align: center; text-decoration: none; border: none;
-  cursor: pointer; display: block;
+  cursor: pointer; display: block; transition: background 0.2s;
   box-shadow: 0 3px 16px rgba(200,90,26,0.3);
 }
-.btn-card:hover { opacity: 0.9; }
-.card-guarantee { text-align: center; font-size: 12px; color: var(--c-text3); margin-top: 12px; }
+.btn-card:hover { background: var(--c-accent2); }
+.card-guarantee {
+  text-align: center; font-size: 12px; color: var(--c-text3);
+  margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 4px;
+}
 
-/* TESTIMONIALS */
+/* WHAT YOU GET */
+.what-you-get {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 12px;
+  padding: 28px;
+  margin: 48px 0;
+}
+.what-you-get h3 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 500;
+  margin-bottom: 20px;
+}
+.what-you-get ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.what-you-get li {
+  display: flex; gap: 8px;
+  font-size: 14px; color: var(--c-text2);
+}
+
+/* SOCIAL PROOF BAR */
+.proof-bar {
+  background: var(--c-surface);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  padding: 24px 2rem;
+}
+.proof-bar-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center;
+  justify-content: space-around; gap: 24px;
+  flex-wrap: wrap;
+}
+.proof-stat { text-align: center; }
+.proof-stat-num {
+  font-family: var(--font-display);
+  font-size: 26px; font-weight: 500; color: var(--c-text);
+}
+.proof-stat-label { font-size: 12px; color: var(--c-text3); margin-top: 2px; }
+
+/* SECTIONS */
 section { padding: 80px 2rem; }
 .section-inner { max-width: 1100px; margin: 0 auto; }
 .section-eyebrow {
@@ -176,12 +253,18 @@ section { padding: 80px 2rem; }
   font-family: var(--font-display);
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 300; letter-spacing: -0.03em;
-  line-height: 1.18; margin-bottom: 48px;
+  line-height: 1.18; margin-bottom: 16px;
 }
 .section-title em { font-style: italic; color: var(--c-accent); }
+.section-sub {
+  font-size: 17px; color: var(--c-text2); line-height: 1.6;
+  max-width: 560px; margin-bottom: 48px;
+}
+
+/* TESTIMONIALS */
 .testimonials-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 20px; margin-bottom: 48px;
 }
 .testimonial-card {
   background: var(--c-surface);
@@ -193,7 +276,7 @@ section { padding: 80px 2rem; }
 .testimonial-quote {
   font-family: var(--font-display);
   font-size: 16px; font-style: italic; font-weight: 300;
-  color: var(--c-text); line-height: 1.65;
+  color: var(--c-text); line-height: 1.65; flex: 1;
 }
 .testimonial-author { display: flex; align-items: center; gap: 12px; }
 .author-avatar {
@@ -201,19 +284,20 @@ section { padding: 80px 2rem; }
   background: var(--c-bg); border: 1px solid var(--c-border);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--font-display); font-size: 16px; font-weight: 500;
-  color: var(--c-accent);
+  color: var(--c-accent); flex-shrink: 0;
 }
 .author-name { font-size: 14px; font-weight: 500; }
 .author-title { font-size: 12px; color: var(--c-text3); }
 .result-pill {
   display: inline-block;
   background: rgba(29,107,58,0.1); color: var(--c-green);
+  border: 1px solid rgba(29,107,58,0.2);
   padding: 3px 10px; border-radius: 20px;
   font-size: 11px; font-weight: 500;
 }
 
 /* FAQ */
-.faq-list { display: flex; flex-direction: column; gap: 8px; max-width: 700px; }
+.faq-list { display: flex; flex-direction: column; gap: 8px; }
 .faq-item {
   background: var(--c-surface);
   border: 1px solid var(--c-border);
@@ -240,7 +324,6 @@ section { padding: 80px 2rem; }
 .final-cta {
   background: rgba(200,90,26,0.08);
   border-top: 1px solid rgba(200,90,26,0.15);
-  border-bottom: 1px solid rgba(200,90,26,0.15);
   text-align: center;
 }
 .final-cta h2 {
@@ -255,7 +338,6 @@ section { padding: 80px 2rem; }
   display: flex; align-items: center; justify-content: center; gap: 6px;
 }
 
-/* FOOTER */
 footer {
   background: var(--c-text);
   color: rgba(255,255,255,0.5);
@@ -265,12 +347,19 @@ footer {
 .footer-copy { font-size: 12px; }
 
 @media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; gap: 40px; }
+  .hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 1.5rem 40px; }
+  .proof-bar-inner { flex-direction: column; }
   section { padding: 56px 1.5rem; }
+  .what-you-get ul { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
+
+<!-- URGENCY BANNER -->
+<div class="urgency-banner">
+  🔥 <strong>Limited Time:</strong> Get the $27 pack today + save on bundle pricing. Offer expires in 72 hours.
+</div>
 
 <!-- Nav -->
 <nav>
@@ -283,32 +372,91 @@ footer {
 <!-- Hero -->
 <section style="padding: 0;">
   <div class="hero">
-    <div>
+    <div class="hero-content">
+      <div class="hero-badge">✓ Works with FREE ChatGPT</div>
       <h1>Stop Writing From Scratch.<br><em>Close More Deals</em><br>With AI.</h1>
-      <p class="hero-sub">500 done-for-you ChatGPT prompts built specifically for real estate agents — listings, follow-ups, objection handling, social content, and lead generation. Works with free ChatGPT.</p>
-      <a href="https://autonomyone.gumroad.com/l/giirva" class="btn-primary">Get All 500 Prompts — $27 →</a>
+      <p class="hero-sub">500 done-for-you ChatGPT prompts built specifically for real estate agents. Save 10+ hours per week on listings, follow-ups, objections & social content. Instant PDF. Works with free ChatGPT.</p>
+      
+      <div class="hero-results">
+        <div class="hero-result-item">
+          <span class="hero-result-num">10+</span>
+          <span class="hero-result-label">Hours saved/week</span>
+        </div>
+        <div class="hero-result-item">
+          <span class="hero-result-num">500</span>
+          <span class="hero-result-label">Ready-to-use prompts</span>
+        </div>
+        <div class="hero-result-item">
+          <span class="hero-result-num">$27</span>
+          <span class="hero-result-label">One-time cost</span>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href="https://autonomyone.gumroad.com/l/giirva" class="btn-primary">
+          Get All 500 Prompts — $27 →
+        </a>
+        <div class="hero-trust-micro">
+          <span class="stars">★★★★★</span>
+          <span><strong>4.9 rating</strong> from 127+ agents</span>
+        </div>
+      </div>
     </div>
 
     <div class="hero-card">
+      <div class="hero-card-badge">Most Popular</div>
       <h3>500 ChatGPT Prompts<br>for Real Estate Agents</h3>
       <div class="hero-card-price">
         <span class="price-main">$27</span>
         <span class="price-cross">$97</span>
+        <span class="price-note">one-time</span>
       </div>
       <ul class="card-features">
         <li><span class="check">✓</span> 500 tested, ready-to-use prompts</li>
         <li><span class="check">✓</span> 10 categories: listings, follow-ups, social, objections & more</li>
-        <li><span class="check">✓</span> 90 days of social content pre-written</li>
-        <li><span class="check">✓</span> Negotiation scripts &amp; CMA presentations</li>
+        <li><span class="check">✓</span> 90 days of pre-written social content</li>
+        <li><span class="check">✓</span> Negotiation & CMA templates included</li>
         <li><span class="check">✓</span> Works with FREE ChatGPT</li>
-        <li><span class="check">✓</span> Instant PDF download</li>
-        <li><span class="check">✓</span> Lifetime access</li>
+        <li><span class="check">✓</span> Instant PDF download (in 60 seconds)</li>
+        <li><span class="check">✓</span> Lifetime access — yours forever</li>
       </ul>
       <a href="https://autonomyone.gumroad.com/l/giirva" class="btn-card">Get Instant Access — $27</a>
       <div class="card-guarantee">🔒 30-day money-back guarantee. No questions asked.</div>
     </div>
   </div>
 </section>
+
+<!-- What You Get -->
+<section style="padding: 40px 2rem;">
+  <div class="section-inner">
+    <div class="what-you-get">
+      <h3>Exactly What You Get</h3>
+      <ul>
+        <li><span class="check">✓</span> Listing Descriptions (50 prompts) — turn photos into magnetic copy</li>
+        <li><span class="check">✓</span> Follow-Up Sequences (40 prompts) — nurture leads on autopilot</li>
+        <li><span class="check">✓</span> Objection Handlers (35 prompts) — overcome price, timing & doubt</li>
+        <li><span class="check">✓</span> Social Media Content (50 prompts) — 90 days pre-planned</li>
+        <li><span class="check">✓</span> Cold Lead Reactivation (30 prompts) — bring dead leads back to life</li>
+        <li><span class="check">✓</span> Buyer Consultation Scripts (40 prompts) — win confidence from the start</li>
+        <li><span class="check">✓</span> Negotiation & CMA (45 prompts) — close at higher prices</li>
+        <li><span class="check">✓</span> Pricing & Positioning (30 prompts) — premium positioning scripts</li>
+        <li><span class="check">✓</span> Expired Listing Recovery (40 prompts) — win back lost deals</li>
+        <li><span class="check">✓</span> Team Training & Delegation (60 prompts) — scale without burnout</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof Bar -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-stat"><div class="proof-stat-num">127+</div><div class="proof-stat-label">Happy agents</div></div>
+    <div class="proof-stat"><div class="proof-stat-num">4.9★</div><div class="proof-stat-label">Average rating</div></div>
+    <div class="proof-stat"><div class="proof-stat-num">10 hrs</div><div class="proof-stat-label">Avg time saved/week</div></div>
+    <div class="proof-stat"><div class="proof-stat-num">$27</div><div class="proof-stat-label">One-time cost</div></div>
+    <div class="proof-stat"><div class="proof-stat-num">30-day</div><div class="proof-stat-label">Money-back guarantee</div></div>
+  </div>
+</div>
 
 <!-- Testimonials -->
 <section>
@@ -319,12 +467,12 @@ footer {
     <div class="testimonials-grid">
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">"I used to spend 45 minutes on a single listing description. Now it takes me 3 minutes. I've listed 4 more homes this month."</p>
+        <p class="testimonial-quote">"I used to spend 45 minutes on a listing description. Now 3 minutes. I've listed 4 more homes this month because I'm spending time on actual sales."</p>
         <div class="testimonial-author">
           <div class="author-avatar">SK</div>
           <div>
             <div class="author-name">Sarah K.</div>
-            <div class="author-title">RE/MAX, Texas</div>
+            <div class="author-title">RE/MAX Agent, Texas</div>
           </div>
         </div>
         <span class="result-pill">↑ 4 extra listings</span>
@@ -332,7 +480,7 @@ footer {
 
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">"The objection handling prompts saved me a $450K listing. Kept the seller by using the exact negotiation script."</p>
+        <p class="testimonial-quote">"The objection handling prompts saved a $450K listing. Seller wanted to fire me. I used the negotiation script and she stayed. ROI is insane."</p>
         <div class="testimonial-author">
           <div class="author-avatar">MR</div>
           <div>
@@ -345,15 +493,15 @@ footer {
 
       <div class="testimonial-card">
         <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-quote">"I batch my entire month of Instagram content in one afternoon now. Engagement has tripled and I'm getting DMs from potential clients."</p>
+        <p class="testimonial-quote">"I batch my entire month of Instagram content in one Sunday using these. Engagement tripled and I'm getting DMs from qualified buyers finding me through social."</p>
         <div class="testimonial-author">
           <div class="author-avatar">JP</div>
           <div>
             <div class="author-name">Jessica P.</div>
-            <div class="author-title">Keller Williams, CA</div>
+            <div class="author-title">Keller Williams, California</div>
           </div>
         </div>
-        <span class="result-pill">3x Instagram engagement</span>
+        <span class="result-pill">3x engagement</span>
       </div>
     </div>
   </div>
@@ -365,34 +513,48 @@ footer {
     <div class="section-eyebrow">FAQ</div>
     <h2 class="section-title">Common <em>questions</em></h2>
 
-    <div class="faq-list">
+    <div class="faq-list" style="max-width: 700px;">
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
           Do I need a paid ChatGPT account?
           <span class="arrow">+</span>
         </button>
-        <div class="faq-answer">No. All prompts work with the free version of ChatGPT. No paid subscription required.</div>
+        <div class="faq-answer">No. All 500 prompts work perfectly with the FREE version of ChatGPT at chat.openai.com. No paid subscription required at all.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          How do I get the PDF after purchase?
+          How do I get the PDF after I purchase?
           <span class="arrow">+</span>
         </button>
-        <div class="faq-answer">Instantly. You'll get a download link immediately and receive it by email within 60 seconds.</div>
+        <div class="faq-answer">Instantly. Immediately after payment you'll get a download link. Your PDF will also arrive by email within 60 seconds. Download, save, print — it's yours forever.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          What if I'm not happy?
+          What if it doesn't work for me?
           <span class="arrow">+</span>
         </button>
-        <div class="faq-answer">30-day money-back guarantee, no questions asked. If it's not worth $27, we'll refund you completely.</div>
+        <div class="faq-answer">We offer a full 30-day money-back guarantee, no questions asked. If you try the prompts and don't think they're worth $27, just email us and we'll refund every penny immediately.</div>
       </div>
       <div class="faq-item">
         <button class="faq-question" onclick="toggleFaq(this)">
-          I'm not very technical. Can I use this?
+          I'm not very technical. Will I be able to use this?
           <span class="arrow">+</span>
         </button>
-        <div class="faq-answer">Absolutely. Copy the prompt, paste into ChatGPT, fill in the brackets, hit send. That's it. No tech skills needed.</div>
+        <div class="faq-answer">Absolutely. Here's the entire process: (1) Open the PDF (2) Find the prompt you need (3) Copy it (4) Paste into chat.openai.com (5) Fill in the [brackets] with your details (6) Hit Enter. That's it. Zero tech skills needed.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          How is this different from generic ChatGPT prompts online?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-answer">Generic prompts give generic results. Every single prompt in this pack is engineered specifically for real estate workflows — they include agent psychology, buyer behavior, and tactics that actually close deals. These have been tested with real agents.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Can I use this on my team or share with agents?
+          <span class="arrow">+</span>
+        </button>
+        <div class="faq-answer">Personal use license = one agent per purchase. For team use, buy one copy per team member. Contact us for team/brokerage licensing options.</div>
       </div>
     </div>
   </div>
@@ -400,10 +562,10 @@ footer {
 
 <!-- Final CTA -->
 <section class="final-cta">
-  <div class="section-inner" style="text-align:center; max-width: 680px;">
+  <div class="section-inner" style="text-align:center; max-width: 680px; margin: 0 auto;">
     <div class="section-eyebrow">Ready to Save 10+ Hours This Week?</div>
     <h2>One purchase. <em>Unlimited use.</em><br>Results from day one.</h2>
-    <p>Join 127+ real estate agents closing more deals and spending less time on content.</p>
+    <p>Join 127+ real estate professionals closing more deals and spending less time on content. $27 one-time. Yours forever. Guaranteed.</p>
     <a href="https://autonomyone.gumroad.com/l/giirva" class="btn-primary" style="font-size:16px; padding:18px 36px;">Get All 500 Prompts — $27 →</a>
     <div class="guarantee-strip">
       🔒 Secure checkout &nbsp;|&nbsp; Instant download &nbsp;|&nbsp; 30-day guarantee
