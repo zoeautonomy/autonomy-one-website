@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>510 ChatGPT Prompts for Hacker News & Indie Hackers</title>
+    <meta name="description" content="510 battle-tested ChatGPT prompts for entrepreneurs, builders, and indie hackers. Build faster. Validate smarter. Ship better.">
+    <meta name="keywords" content="hacker news prompts, ChatGPT prompts, indie hackers, startup prompts, entrepreneur tools">
+    <link rel="canonical" href="https://autonomyonellc.com/products/hacker-news-prompts.html">
+    
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="https://autonomyonellc.com/products/hacker-news-prompts.html">
+    <meta property="og:title" content="510 ChatGPT Prompts for Hacker News & Indie Hackers">
+    <meta property="og:description" content="The prompt pack serious builders use. Ideation, MVP validation, growth, scaling, and monetization.">
+    <meta property="og:image" content="https://autonomyonellc.com/images/hn-prompts-og.png">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "510 ChatGPT Prompts for Hacker News & Indie Hackers",
+      "description": "Comprehensive prompt library for entrepreneurs and builders",
+      "image": "https://autonomyonellc.com/images/hn-prompts-og.png",
+      "brand": {
+        "@type": "Brand",
+        "name": "Autonomy One"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://autonomyone.gumroad.com/l/hnprompts",
+        "priceCurrency": "USD",
+        "price": "37",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "127"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0f0c1e 0%, #1a0f2e 50%, #2a1555 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Gradient orbs */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -40%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -30%;
+            left: -15%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e0e0e0;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(90deg, #a855f7, #ec4899, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero .cta {
+            display: inline-block;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(168, 85, 247, 0.4);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #a855f7;
+        }
+
+        .feature-card p {
+            color: #b0b0b0;
+            font-size: 0.95rem;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section h3 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1.5rem 0;
+            color: #a855f7;
+        }
+
+        .section ul {
+            list-style: none;
+            columns: 2;
+            gap: 2rem;
+        }
+
+        .section li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #b0b0b0;
+        }
+
+        .section li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #a855f7;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            max-width: 600px;
+            margin: 4rem auto;
+            padding: 3rem 2rem;
+            background: rgba(168, 85, 247, 0.05);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            border-radius: 12px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .pricing h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #a855f7;
+            margin: 1rem 0;
+        }
+
+        .price-tag span {
+            font-size: 1.2rem;
+            color: #b0b0b0;
+        }
+
+        .pricing p {
+            color: #b0b0b0;
+            margin: 1.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .pricing .cta {
+            display: inline-block;
+            background: linear-gradient(90deg, #a855f7, #ec4899);
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1.5rem;
+        }
+
+        .pricing .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.3);
+        }
+
+        /* FAQ */
+        .faq {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .faq h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            color: #a855f7;
+        }
+
+        .faq-item p {
+            color: #b0b0b0;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #666;
+            border-top: 1px solid rgba(168, 85, 247, 0.1);
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: #a855f7;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section ul {
+                columns: 1;
+            }
+
+            nav {
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="logo">Autonomy One</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/products.html">Products</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>510 ChatGPT Prompts for Hacker News & Indie Hackers</h1>
+            <p>The prompt pack serious builders use. From ideation to scale. Build faster. Validate smarter. Ship better.</p>
+            <a href="https://autonomyone.gumroad.com/l/hnprompts" class="cta">Get the Prompts ($37)</a>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>💡 14 Sections</h3>
+                    <p>From ideation through scaling. Every phase of building covered.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🚀 510 Prompts</h3>
+                    <p>Battle-tested, specific, actionable. No fluff.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎯 Real Scenarios</h3>
+                    <p>Section 13 covers 100 real problems you'll actually face.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Copy & Paste</h3>
+                    <p>Drop these straight into ChatGPT. Customize with your details. Get instant insights.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>⚡ Fast Ideas</h3>
+                    <p>Explore 50 ideas in an hour. Validate them in a day.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔁 Reusable</h3>
+                    <p>Use them once or 100 times across different projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What's Inside -->
+        <section class="section">
+            <h3>What's Inside</h3>
+            
+            <h4 style="color: #06b6d4; margin-top: 2rem; margin-bottom: 1rem;">Section 1-2: Ideation & Building</h4>
+            <ul>
+                <li>Validate ideas before you code</li>
+                <li>Find underserved niches in your market</li>
+                <li>Customer discovery frameworks</li>
+                <li>MVP prioritization playbooks</li>
+                <li>Technical stack decisions</li>
+            </ul>
+
+            <h4 style="color: #06b6d4; margin-top: 2rem; margin-bottom: 1rem;">Section 3-4: Launch & Growth</h4>
+            <ul>
+                <li>Product Hunt launch strategies</li>
+                <li>Hacker News submission tactics</li>
+                <li>First 100 customers playbook</li>
+                <li>Pricing models that work</li>
+                <li>Launch day checklists</li>
+            </ul>
+
+            <h4 style="color: #06b6d4; margin-top: 2rem; margin-bottom: 1rem;">Section 5-6: Operations & Scaling</h4>
+            <ul>
+                <li>Automation frameworks</li>
+                <li>Hiring playbooks</li>
+                <li>Product roadmap templates</li>
+                <li>Market expansion strategies</li>
+                <li>Time management for solo founders</li>
+            </ul>
+
+            <h4 style="color: #06b6d4; margin-top: 2rem; margin-bottom: 1rem;">Section 7-8: Revenue & Mindset</h4>
+            <ul>
+                <li>Bootstrapping strategies</li>
+                <li>Financial projections</li>
+                <li>Fundraising frameworks</li>
+                <li>Overcoming self-doubt</li>
+                <li>Decision-making under uncertainty</li>
+            </ul>
+
+            <h4 style="color: #06b6d4; margin-top: 2rem; margin-bottom: 1rem;">Section 9-12: Marketing, Analytics & Advanced Strategies</h4>
+            <ul>
+                <li>Brand positioning</li>
+                <li>Social media strategies</li>
+                <li>Email marketing frameworks</li>
+                <li>A/B testing plans</li>
+                <li>Product-market fit diagnosis</li>
+                <li>Competitive positioning</li>
+            </ul>
+
+            <h4 style="color: #06b6d4; margin-top: 2rem; margin-bottom: 1rem;">Section 13-14: Real Problems & Scenarios</h4>
+            <ul>
+                <li>Handling launch day crises</li>
+                <li>Navigating competitive threats</li>
+                <li>Reducing customer churn</li>
+                <li>Building high-performing teams</li>
+                <li>Industry-specific playbooks (SaaS, Marketplaces, Services)</li>
+            </ul>
+        </section>
+
+        <!-- How to Use -->
+        <section class="section">
+            <h3>How to Use This Pack</h3>
+            <ul>
+                <li><strong>Ideation Sessions:</strong> Run prompts 1-50 through ChatGPT, capture the best ideas</li>
+                <li><strong>Weekly Planning:</strong> Use Sections 4-6 for operational planning</li>
+                <li><strong>Launch Sprint:</strong> Focus on Section 3 (Growth) 2-4 weeks before launch</li>
+                <li><strong>Stuck Mode:</strong> Find the relevant section and work through the prompts</li>
+                <li><strong>Scaling:</strong> Use Sections 6, 12 when you're ready to scale 10x</li>
+            </ul>
+            <p style="margin-top: 2rem; color: #06b6d4;"><strong>Pro Tip:</strong> Replace [brackets] with your specific details. The more specific your input, the more useful the output.</p>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="section" style="text-align: center; margin: 4rem auto;">
+            <h3>Used By Builders On</h3>
+            <p style="color: #666; font-size: 0.95rem; margin-top: 1.5rem;">
+                Hacker News • Indie Hackers • Product Hunt • Twitter/X • Micro-SaaS Communities
+            </p>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing">
+            <h2>One-time investment</h2>
+            <div class="price-tag">$37<span>.00</span></div>
+            <p>Instant PDF download. Use forever. Build unlimited projects.</p>
+            <p style="font-size: 0.9rem; color: #666;">No subscriptions. No upsells. No complexity.</p>
+            <a href="https://autonomyone.gumroad.com/l/hnprompts" class="cta">Get Access Now</a>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq">
+            <h2>Questions?</h2>
+            
+            <div class="faq-item">
+                <h4>Can I use these for client work?</h4>
+                <p>Yes. You can use these prompts for your own projects, client projects, and products. Generate ideas, strategies, and frameworks for anyone.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What if I don't use ChatGPT?</h4>
+                <p>These work with Claude, Gemini, and any capable LLM. The prompts are platform-agnostic—they're pure thinking frameworks.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Are these just generic startup prompts?</h4>
+                <p>No. These are specifically designed for builders on Hacker News and indie hackers. They emphasize bootstrapping, solo execution, and rapid iteration.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How are these different from other prompt packs?</h4>
+                <p>These are written by someone building real businesses. They cover the actual decisions you'll face: ideation, MVP scope, pricing, first customers, scaling, and pivoting.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do I get updates?</h4>
+                <p>This is a one-time PDF. You keep it forever. If new sections are added, Gumroad will notify you of an update available.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Money-back guarantee?</h4>
+                <p>If you're not satisfied within 30 days, Gumroad will refund you. No questions asked. But these prompts are designed to work immediately.</p>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section style="max-width: 800px; margin: 4rem auto; padding: 0 2rem; text-align: center;">
+            <h2 style="font-size: 2rem; margin-bottom: 1rem;">Ready to build smarter?</h2>
+            <p style="color: #b0b0b0; font-size: 1.1rem; margin-bottom: 2rem;">510 prompts. 14 sections. One price. Use forever.</p>
+            <a href="https://autonomyone.gumroad.com/l/hnprompts" class="cta" style="display: inline-block;">Get the Prompts ($37)</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Autonomy One. All rights reserved. <a href="/privacy-policy.html">Privacy</a> • <a href="/terms.html">Terms</a></p>
+    </footer>
+</body>
+</html>
